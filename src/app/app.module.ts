@@ -6,6 +6,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // Import 
 
 import { AppComponent } from './app.component';
 import { CreateTicketComponent } from './create-ticket/create-ticket.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { CreateTicketComponent } from './create-ticket/create-ticket.component';
     BrowserModule,
     ReactiveFormsModule, // Pro použití formGroup
     CommonModule, // Pro použití *ngIf
-    FontAwesomeModule
+    FontAwesomeModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

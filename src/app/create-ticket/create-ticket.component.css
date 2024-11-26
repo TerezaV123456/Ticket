@@ -3,14 +3,34 @@
 }
 
 .nav {
-    background-color: #a80011;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    background-color: #70030e;
+    padding: 10px 20px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Jemný stín */
 }
 
 .nav-text {
     display: flex;
-    padding-left: 50px;
-    margin-bottom: 25px;
+    align-items: center; /* Vertikální zarovnání pro texty vedle loga */
+    gap: 20px; /* Mezera mezi položkami */
+}
+
+.logo {
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.dashboard:hover {
+    cursor: pointer;
+}
+
+.active:hover {
+    cursor: pointer;
 }
 
 .dashboard {
@@ -56,7 +76,7 @@
     text-align: center;
     font-size: 40px;
 }
-
+  
 .name {
     width: 200px;
     height: 40px;

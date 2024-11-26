@@ -6,18 +6,23 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; // Import 
 
 import { AppComponent } from './app.component';
 import { CreateTicketComponent } from './create-ticket/create-ticket.component';
+import { SeeTicketComponent } from './see-ticket/see-ticket.component'; // Přidání SeeTicketComponent
+import { DashboardComponent } from './dashboard/dashboard.component'; // Přidání DashboardComponent
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreateTicketComponent
+    CreateTicketComponent,
+    SeeTicketComponent, // Deklarace SeeTicketComponent
+    DashboardComponent  // Deklarace DashboardComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule, // Pro použití formGroup
     CommonModule, // Pro použití *ngIf
-    FontAwesomeModule, AppRoutingModule
+    FontAwesomeModule,
+    AppRoutingModule // Pro použití routingu
   ],
   providers: [],
   bootstrap: [AppComponent]

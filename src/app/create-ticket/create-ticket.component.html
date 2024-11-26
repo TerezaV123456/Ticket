@@ -5,15 +5,18 @@
     <nav class="nav">
     <!--Navigation-->
         <!--Left Navigation-->
+        <section class="left-nav">
             <img title="logo" src="assets/images/alpodgroup.png" style="width: 200px; height: auto;">
 
             <section class="nav-text">
                 <a class="dashboard" routerLink="../dashboard" routerLinkActive="active"><i class="fa-solid fa-grip"></i>Nástěnka</a>
                 <a class="active" routerLink="../see-ticket" routerLinkActive="active"><i class="fa-solid fa-ticket"></i>Tickety</a>
             </section>
+        </section>
 
         <!--Right Navigation-->
         <section class="right-nav">
+
         </section>
     </nav>
 
@@ -23,53 +26,59 @@
             <h1 class="text-create">Nový ticket</h1>
 
             <!--First line-->
-            <div class="first-line">
-                <!--Company / person-->
-                <div class="person">
-                    <h4 class="text-firm">Firma / Osoba</h4>
-                        <input class="name" id="name" formControlname="name" type="text" placeholder="Jméno" required/>
-                        <div *ngIf="ticketForm.get('name')?.invalid && ticketForm.get('name')?.touched"></div>
-                </div>
+            <div class="form">
+                <div class="first-line">
+                    <!--Company / person-->
+                    <div class="person">
+                        <h4 class="text-firm">Firma / Osoba</h4>
+                            <input class="name" id="name" formControlname="name" type="text" placeholder="Jméno" required/>
+                            <div *ngIf="ticketForm.get('name')?.invalid && ticketForm.get('name')?.touched"></div>
+                    </div>
 
-                <!--E-mail-->
-                <div class="email">
-                    <h4 class="text-mail">E-mail</h4>
-                        <input class="mail" id="email" formControlname="email" type="text" placeholder="Email" required/>
-                </div>
-            </div>
-            
-            <!--Second line-->
-            <div class="second-line">
-                <!--Phone-->
-                <div class="phone">
-                    <h4 class="text-phone">Telefonní číslo</h4>
-                        <input class="telephone" id="phone" formControlname="phone" type="number" placeholder="Telefonní číslo" required/>
+                    <!--E-mail-->
+                    <div class="email">
+                        <h4 class="text-mail">E-mail</h4>
+                            <input class="mail" id="email" formControlname="email" type="text" placeholder="Email" required/>
+                    </div>
                 </div>
                 
-                <!--Problem type-->
-                <div>
-                    <h4 class="text-problem">Typ problému</h4>
-                    <select title="problem" class="problem" name="Problem" id="problem" required>
-                        <option value="problem1">Problém1</option>
-                        <option value="problem2">Problém2</option>
-                        <option value="problem3">Problém3</option>
-                    </select>
+                <!--Second line-->
+                <div class="second-line">
+                    <!--Phone-->
+                    <div class="phone">
+                        <h4 class="text-phone">Telefonní číslo</h4>
+                            <input class="telephone" id="phone" formControlname="phone" type="number" placeholder="Telefonní číslo" required/>
+                    </div>
+                    
+                    <!--Problem type-->
+                    <div>
+                        <h4 class="text-problem">Typ problému</h4>
+                        <select title="problem" class="problem" name="Problem" id="problem" required>
+                            <option value="problem1">Problém1</option>
+                            <option value="problem2">Problém2</option>
+                            <option value="problem3">Problém3</option>
+                        </select>
+                    </div>
+
+                    <!--Ticket type-->
+                    <div class="ticket">
+                        <h4 class="text-ticket">Typ ticketu</h4>
+                        <select title="type" class="type" name="Typ-ticketu" id="typ" required>
+                            <option value="typ1">typ1</option>
+                            <option value="typ2">typ2</option>
+                            <option value="typ3">typ3</option>
+                        </select>
+                    </div>
                 </div>
 
-                <!--Ticket type-->
-                <div class="ticket">
-                    <h4 class="text-ticket">Typ ticketu</h4>
-                    <select title="type" class="type" name="Typ-ticketu" id="typ" required>
-                        <option value="typ1">typ1</option>
-                        <option value="typ2">typ2</option>
-                        <option value="typ3">typ3</option>
-                    </select>
+                <!--Last line-->
+                <div class="last-line">
+                    <!--Description-->
+                    <div class="desc">
+                        <h4 class="text-description">Popis problému</h4>
+                        <textarea class="description" id="description" formControlName="description" type="textarea" placeholder="Popište problém..."></textarea>
+                    </div>
                 </div>
-            </div>
-            <!--Description-->
-            <div class="desc">
-                <h4 class="text-description">Popis problému</h4>
-                <textarea class="description" id="description" formControlName="description" type="textarea" placeholder="Popište problém..."></textarea>
             </div>
 
             <!--Buttons-->
